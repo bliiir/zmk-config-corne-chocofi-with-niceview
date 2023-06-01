@@ -5,6 +5,7 @@
  */
 
 #include <behaviors.dtsi>
+#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 
 / {
@@ -45,8 +46,8 @@
             bindings = <
 &none           &kp Q        &kp M               &kp G         &kp C           &kp Y             &kp X              &kp L                &kp H                &kp P            &kp Z  &none
 &none  &mt LEFT_ALT D  &mt LCTRL A  &mt LEFT_COMMAND S  &mt LSHIFT E           &none             &none  &mt RIGHT_SHIFT T  &mt RIGHT_COMMAND I  &mt RIGHT_CONTROL N  &mt RIGHT_ALT O  &none
-&none           &kp B        &kp K               &kp F         &kp U           &none             &mo 0              &kp R                &kp W                &kp V            &kp J  &none
-                                    &lt_kp 2 BACKSPACE  &lt_kp 3 TAB  &lt_kp 4 SPACE    &lt_kp 5 ENTER    &lt_kp 6 ESCAPE      &lt_kp 7 DELETE
+&none           &kp B        &kp K               &kp F         &kp U      &bt BT_NXT        &bt BT_CLR              &kp R                &kp W                &kp V            &kp J  &none
+                                       &lt_kp 2 DELETE  &lt_kp 3 TAB  &lt_kp 4 SPACE    &lt_kp 5 ENTER    &lt_kp 6 ESCAPE   &lt_kp 7 BACKSPACE
             >;
         };
 
@@ -62,6 +63,15 @@
 &none  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &none
 &none  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &none
                        &trans  &trans  &trans    &trans  &trans  &trans
+            >;
+        };
+
+        quotes_dashes {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp RA(SINGLE_QUOTE)          &kp RA(O)  &kp RA(A)  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans               &kp SQT  &kp DOUBLE_QUOTES  &kp GRAVE  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans             &kp MINUS     &kp UNDERSCORE  &kp TILDE  &trans  &trans
+                        &trans  &trans  &trans    &trans                &trans             &trans
             >;
         };
 
@@ -86,15 +96,6 @@
 &trans  &trans  &trans  &trans  &trans  &trans    &kp FSLH  &kp N4  &kp N5  &kp N6  &kp MINUS  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &kp N0  &kp N1  &kp N2  &kp N3  &kp EQUAL  &trans
                         &trans  &trans  &trans      &trans  &trans  &trans
-            >;
-        };
-
-        quotes_dashes {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp RA(SINGLE_QUOTE)          &kp RA(O)  &kp RA(A)  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans               &kp SQT  &kp DOUBLE_QUOTES  &kp GRAVE  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans             &kp MINUS     &kp UNDERSCORE  &kp TILDE  &trans  &trans
-                        &trans  &trans  &trans    &trans                &trans             &trans
             >;
         };
 

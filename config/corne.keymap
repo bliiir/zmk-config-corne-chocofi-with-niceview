@@ -10,9 +10,9 @@
 
 / {
     behaviors {
-        mo_kp: mo_kp {
+        mo_kp2: mo_kp2 {
             compatible = "zmk,behavior-hold-tap";
-            label = "MO_KP";
+            label = "MO_KP2";
             bindings =
                 <&mo>,
                 <&kp>;

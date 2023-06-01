@@ -44,10 +44,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&none           &kp Q        &kp M               &kp P         &kp C           &kp X             &kp Z              &kp U                &kp G                &kp F            &kp Y  &none
-&none  &mt LEFT_ALT N  &mt LCTRL A  &mt LEFT_COMMAND S  &mt LSHIFT E           &none             &none  &mt RIGHT_SHIFT T  &mt RIGHT_COMMAND I  &mt RIGHT_CONTROL D  &mt RIGHT_ALT O  &none
-&none           &kp V        &kp K               &kp H         &kp R      &bt BT_NXT        &bt BT_CLR              &kp L                &kp W                &kp B            &kp J  &none
-                                       &lt_kp 2 DELETE  &lt_kp 3 TAB  &lt_kp 4 SPACE    &lt_kp 5 ENTER    &lt_kp 6 ESCAPE   &lt_kp 7 BACKSPACE
+&none           &kp Q        &kp M               &kp P               &kp C           &kp X             &kp Z              &kp U                &kp G                &kp F            &kp Y  &none
+&none  &mt LEFT_ALT N  &mt LCTRL A  &mt LEFT_COMMAND S        &mt LSHIFT E           &none             &none  &mt RIGHT_SHIFT T  &mt RIGHT_COMMAND I  &mt RIGHT_CONTROL D  &mt RIGHT_ALT O  &none
+&none           &kp V        &kp K               &kp H               &kp R      &bt BT_NXT        &bt BT_CLR              &kp L                &kp W                &kp B            &kp J  &none
+                                       &lt_kp 2 DELETE  &lt_kp 3 BACKSPACE  &lt_kp 4 SPACE    &lt_kp 5 ENTER       &lt_kp 6 TAB      &lt_kp 7 ESCAPE
             >;
         };
 

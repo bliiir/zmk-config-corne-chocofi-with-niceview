@@ -30,11 +30,6 @@
             bindings = <&bt BT_CLR>;
             key-positions = <29 30>;
         };
-
-        back_to_base {
-            bindings = <&to 1>;
-            key-positions = <36 41>;
-        };
     };
 
     keymap {
@@ -48,25 +43,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&none           &kp Q        &kp F               &kp G               &kp C           &kp X             &kp Z              &kp U                &kp P                &kp M            &kp Y  &none
-&none           &kp N        &kp A               &kp S               &kp E           &none             &none              &kp T                &kp I                &kp D            &kp O  &none
-&none  &mt LEFT_ALT V  &mt LCTRL B  &mt LEFT_COMMAND H    &mt LEFT_SHIFT R      &bt BT_PRV        &bt BT_NXT  &mt RIGHT_SHIFT L  &mt RIGHT_COMMAND W  &mt RIGHT_CONTROL K  &mt RIGHT_ALT J  &none
-                                       &mo_kp 2 DELETE  &mo_kp 3 BACKSPACE  &mo_kp 4 SPACE    &mo_kp 5 ENTER       &mo_kp 6 TAB      &mo_kp 7 ESCAPE
-            >;
-        };
-
-        transparent {
-            // -----------------------------------------------------------------------------------------
-            // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
-            // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
-            // | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
-            //                    | GUI |     | SPC |   | ENT |     | ALT |
-
-            bindings = <
-&none  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &none
-&none  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &none
-&none  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &none
-                       &trans  &trans  &trans    &trans  &trans  &trans
+&none           &kp Q        &kp F               &kp W             &kp C           &kp X             &kp Z              &kp U                &kp M                &kp B            &kp Y  &none
+&none           &kp S        &kp A               &kp I             &kp E           &none             &none              &kp T                &kp O                &kp D            &kp N  &none
+&none  &mt LEFT_ALT K  &mt LCTRL V  &mt LEFT_COMMAND G  &mt LEFT_SHIFT R      &bt BT_PRV        &bt BT_NXT  &mt RIGHT_SHIFT L  &mt RIGHT_COMMAND H  &mt RIGHT_CONTROL P  &mt RIGHT_ALT J  &none
+                                       &mo_kp 1 DELETE      &mo_kp 2 TAB  &mo_kp 3 SPACE    &mo_kp 4 ENTER    &mo_kp 5 ESCAPE   &mo_kp 6 BACKSPACE
             >;
         };
 
@@ -88,7 +68,7 @@
 
             bindings = <
 &none  &trans  &trans   &none  &trans  &trans    &trans  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS   &kp LESS_THAN  &kp GREATER_THAN  &none
-&none  &trans  &trans  &trans  &trans  &trans    &trans             &kp COMMA                &kp DOT        &kp SEMI         &kp COLON  &none
+&none  &trans  &trans  &trans  &trans  &trans    &trans            &kp PERIOD              &kp COLON       &kp COMMA     &kp SEMICOLON  &none
 &none  &trans  &trans  &trans  &trans  &trans    &trans      &kp LEFT_BRACKET      &kp RIGHT_BRACKET  &kp LEFT_BRACE   &kp RIGHT_BRACE  &none
                        &trans  &trans  &trans    &trans                &trans                 &trans
             >;

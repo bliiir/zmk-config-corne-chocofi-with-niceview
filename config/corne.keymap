@@ -45,7 +45,7 @@
             bindings = <
 &none           &kp Q        &kp F               &kp W             &kp C           &kp X             &kp Z              &kp U                &kp M                &kp B            &kp Y  &none
 &none           &kp S        &kp A               &kp I             &kp E           &none             &none              &kp T                &kp O                &kp D            &kp N  &none
-&none  &mt LEFT_ALT K  &mt LCTRL V  &mt LEFT_COMMAND G  &mt LEFT_SHIFT R      &bt BT_PRV        &bt BT_NXT  &mt RIGHT_SHIFT L  &mt RIGHT_COMMAND H  &mt RIGHT_CONTROL P  &mt RIGHT_ALT J  &none
+&none  &mt LEFT_ALT K  &mt LCTRL V  &mt LEFT_COMMAND G  &mt LEFT_SHIFT S      &bt BT_PRV        &bt BT_NXT  &mt RIGHT_SHIFT R  &mt RIGHT_COMMAND H  &mt RIGHT_CONTROL P  &mt RIGHT_ALT J  &none
                                        &mo_kp 1 DELETE      &mo_kp 2 TAB  &mo_kp 3 SPACE    &mo_kp 4 ENTER    &mo_kp 5 ESCAPE   &mo_kp 6 BACKSPACE
             >;
         };

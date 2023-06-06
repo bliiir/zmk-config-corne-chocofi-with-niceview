@@ -45,7 +45,7 @@
             bindings = <
 &none           &kp Q        &kp V               &kp F             &kp C           &kp X             &kp Z              &kp U                &kp G                &kp B            &kp J  &none
 &none           &kp R        &kp O               &kp S             &kp E      &kp DELETE     &kp BACKSPACE              &kp T                &kp I                &kp N            &kp A  &none
-&none  &mt LEFT_ALT K  &mt LCTRL W  &mt LEFT_COMMAND M  &mt LEFT_SHIFT L      &bt BT_PRV        &bt BT_NXT  &mt RIGHT_SHIFT D  &mt RIGHT_COMMAND P  &mt RIGHT_CONTROL H  &mt RIGHT_ALT Y  &none
+&none  &mt LEFT_ALT K  &mt LCTRL W  &mt LEFT_COMMAND M  &mt LEFT_SHIFT L           &none             &none  &mt RIGHT_SHIFT D  &mt RIGHT_COMMAND P  &mt RIGHT_CONTROL H  &mt RIGHT_ALT Y  &none
                                                  &mo 1      &mo_kp 2 TAB  &mo_kp 3 SPACE    &mo_kp 4 ENTER    &mo_kp 5 ESCAPE                &mo 6
             >;
         };
@@ -103,10 +103,10 @@
 
         function_keys {
             bindings = <
-&trans  &kp F1   &kp F2   &kp F3   &kp F4  &trans    &trans  &kp F13  &kp F14  &kp F15  &kp F16  &trans
-&trans  &kp F5   &kp F6   &kp F7   &kp F8  &trans    &trans  &kp F17  &kp F18  &kp F19  &kp F20  &trans
-&trans  &kp F9  &kp F10  &kp F11  &kp F12  &trans    &trans  &kp F21  &kp F22  &kp F23  &kp F24  &trans
-                          &trans   &trans  &trans    &trans   &trans   &trans
+&trans  &kp F1   &kp F2   &kp F3   &kp F4  &trans    &trans  &kp F13     &kp F14     &kp F15     &kp F16  &trans
+&trans  &kp F5   &kp F6   &kp F7   &kp F8  &trans    &trans  &kp F17     &kp F18     &kp F19     &kp F20  &trans
+&trans  &kp F9  &kp F10  &kp F11  &kp F12  &trans    &trans  &kp F21  &bt BT_PRV  &bt BT_NXT  &bt BT_CLR  &trans
+                          &trans   &trans  &trans    &trans   &trans      &trans
             >;
         };
     };

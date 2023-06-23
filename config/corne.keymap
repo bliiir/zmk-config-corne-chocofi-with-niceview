@@ -50,27 +50,21 @@
             >;
         };
 
-        quotes_dashes {
+        mouse {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp SLASH           &kp BSLH   &kp PIPE    &kp RA(A)  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans    &kp SQT  &kp DOUBLE_QUOTES  &kp GRAVE    &kp RA(O)  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp MINUS     &kp UNDERSCORE  &kp TILDE  &kp RA(SQT)  &trans
-                        &trans  &trans  &trans    &trans     &trans             &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
 
-        punctuation_brackets {
-            // -----------------------------------------------------------------------------------------
-            // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
-            // | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
-            // | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
-            //                    | GUI |     | SPC |   | ENT |     | ALT |
-
+        navigation {
             bindings = <
-&none  &trans  &trans   &none  &trans  &trans    &trans  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS   &kp LESS_THAN  &kp GREATER_THAN  &none
-&none  &trans  &trans  &trans  &trans  &trans    &trans            &kp PERIOD              &kp COLON       &kp COMMA     &kp SEMICOLON  &none
-&none  &trans  &trans  &trans  &trans  &trans    &trans      &kp LEFT_BRACKET      &kp RIGHT_BRACKET  &kp LEFT_BRACE   &kp RIGHT_BRACE  &none
-                       &trans  &trans  &trans    &trans                &trans                 &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp RA(RG(LEFT))  &kp PG_DN  &kp PG_UP  &kp RA(RG(RIGHT))  &trans
+ &none  &trans  &trans  &trans  &trans  &trans    &trans          &kp LEFT   &kp DOWN     &kp UP          &kp RIGHT  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans      &kp RG(LEFT)    &kp END   &kp HOME      &kp RG(RIGHT)  &trans
+                        &trans  &trans  &trans    &trans            &trans     &trans
             >;
         };
 
@@ -83,21 +77,27 @@
             >;
         };
 
-        navigation {
+        punctuation_brackets {
+            // -----------------------------------------------------------------------------------------
+            // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
+            // | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
+            // | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
+            //                    | GUI |     | SPC |   | ENT |     | ALT |
+
             bindings = <
-&trans  &kp LA(LG(LEFT_ARROW))     &kp PG_UP  &kp PG_DN  &kp LA(LG(RIGHT))  &trans    &trans  &trans  &trans  &trans  &trans  &trans
- &none          &kp LEFT_ARROW  &kp UP_ARROW   &kp DOWN          &kp RIGHT  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans            &kp LG(LEFT)      &kp HOME    &kp END      &kp LG(RIGHT)  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                                                 &trans             &trans  &trans    &trans  &trans  &trans
+&none   &kp LESS_THAN  &kp GREATER_THAN  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans    &trans  &trans  &trans  &trans  &trans  &none
+&none   &kp SEMICOLON         &kp COMMA             &kp COLON             &kp PERIOD  &trans    &trans  &trans  &trans  &trans  &trans  &none
+&none  &kp LEFT_BRACE   &kp RIGHT_BRACE      &kp LEFT_BRACKET      &kp RIGHT_BRACKET  &trans    &trans  &trans  &trans  &trans  &trans  &none
+                                                       &trans                 &trans  &trans    &trans  &trans  &trans
             >;
         };
 
-        mouse {
+        quotes_dashes {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
+&trans    &kp LA(A)   &kp PIPE           &kp BSLH  &kp SLASH  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans    &kp LA(O)  &kp GRAVE  &kp DOUBLE_QUOTES    &kp SQT  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp LA(SQT)  &kp TILDE     &kp UNDERSCORE  &kp MINUS  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                                           &trans     &trans  &trans    &trans  &trans  &trans
             >;
         };
 

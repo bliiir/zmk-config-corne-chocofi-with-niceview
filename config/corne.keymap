@@ -43,9 +43,9 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&none           &kp Q        &kp W               &kp E             &kp R           &kp T             &kp Y              &kp U                &kp I                &kp O            &kp P  &none
-&none           &kp A        &kp S               &kp D             &kp F      &kp DELETE     &kp BACKSPACE              &kp H                &kp J                &kp K            &kp L  &none
-&none  &mt LEFT_ALT Z  &mt LCTRL X  &mt LEFT_COMMAND C  &mt LEFT_SHIFT V           &none             &none  &mt RIGHT_SHIFT G  &mt RIGHT_COMMAND B  &mt RIGHT_CONTROL N  &mt RIGHT_ALT M  &none
+&none           &kp Q        &kp W               &kp F             &kp M           &kp X             &kp Z              &kp U                &kp G                &kp B            &kp J  &none
+&none           &kp R        &kp O               &kp S             &kp E      &kp DELETE     &kp BACKSPACE              &kp T                &kp I                &kp N            &kp A  &none
+&none  &mt LEFT_ALT K  &mt LCTRL V  &mt LEFT_COMMAND C  &mt LEFT_SHIFT L           &none             &none  &mt RIGHT_SHIFT D  &mt RIGHT_COMMAND P  &mt RIGHT_CONTROL H  &mt RIGHT_ALT Y  &none
                                                  &mo 1      &mo_kp 2 TAB  &mo_kp 3 SPACE    &mo_kp 4 ENTER    &mo_kp 5 ESCAPE                &mo 6
             >;
         };

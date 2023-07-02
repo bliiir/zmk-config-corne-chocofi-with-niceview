@@ -10,9 +10,9 @@
 
 / {
     behaviors {
-        mo_kp2: mo_kp2 {
+        mo_kp: mo_kp {
             compatible = "zmk,behavior-hold-tap";
-            label = "MO_KP2";
+            label = "MO_KP";
             bindings =
                 <&mo>,
                 <&kp>;
@@ -26,14 +26,8 @@
     combos {
         compatible = "zmk,combos";
 
-        back_to_base {
-            bindings = <&lt 1 0>;
-            key-positions = <36 41>;
-            layers = <0>;
-        };
-
         bt_clr {
-            bindings = <&bt 0>;
+            bindings = <&bt BT_CLR>;
             key-positions = <29 30>;
         };
     };
@@ -42,93 +36,67 @@
         compatible = "zmk,keymap";
 
         base {
-            // -----------------------------------------------------------------------------------------
-            // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
-            // | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
-            // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
-            //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
-
             bindings = <
-&none           &kp Q        &kp F               &kp G               &kp C           &kp X             &kp Z              &kp U                &kp P                &kp M            &kp Y  &none
-&none  &mt LEFT_ALT N  &mt LCTRL A  &mt LEFT_COMMAND S    &mt LEFT_SHIFT E           &none             &none  &mt RIGHT_SHIFT T  &mt RIGHT_COMMAND I  &mt RIGHT_CONTROL D  &mt RIGHT_ALT O  &none
-&none           &kp V        &kp B               &kp H               &kp R      &bt BT_NXT        &bt BT_PRV              &kp L                &kp W                &kp K            &kp J  &none
-                                       &mo_kp 2 DELETE  &mo_kp 3 BACKSPACE  &mo_kp 4 SPACE    &mo_kp 5 ENTER       &mo_kp 6 TAB      &mo_kp 7 ESCAPE
-            >;
-        };
-
-        transparent {
-            // -----------------------------------------------------------------------------------------
-            // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
-            // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
-            // | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
-            //                    | GUI |     | SPC |   | ENT |     | ALT |
-
-            bindings = <
-&none  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &none
-&none  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &none
-&none  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &none
-                       &trans  &trans  &trans    &trans  &trans  &trans
-            >;
-        };
-
-        quotes_dashes {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp RA(SINGLE_QUOTE)          &kp RA(O)  &kp RA(A)  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans               &kp SQT  &kp DOUBLE_QUOTES  &kp GRAVE  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans             &kp MINUS     &kp UNDERSCORE  &kp TILDE  &trans  &trans
-                        &trans  &trans  &trans    &trans                &trans             &trans
-            >;
-        };
-
-        punctuation_brackets {
-            // -----------------------------------------------------------------------------------------
-            // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
-            // | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
-            // | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
-            //                    | GUI |     | SPC |   | ENT |     | ALT |
-
-            bindings = <
-&none  &trans  &trans   &none  &trans  &trans    &trans  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS   &kp LESS_THAN  &kp GREATER_THAN  &none
-&none  &trans  &trans  &trans  &trans  &trans    &trans             &kp COMMA                &kp DOT        &kp SEMI         &kp COLON  &none
-&none  &trans  &trans  &trans  &trans  &trans    &trans      &kp LEFT_BRACKET      &kp RIGHT_BRACKET  &kp LEFT_BRACE   &kp RIGHT_BRACE  &none
-                       &trans  &trans  &trans    &trans                &trans                 &trans
-            >;
-        };
-
-        numpad {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &kp BSLH  &kp N7  &kp N8  &kp N9     &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &kp FSLH  &kp N4  &kp N5  &kp N6  &kp MINUS  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &kp N0  &kp N1  &kp N2  &kp N3  &kp EQUAL  &trans
-                        &trans  &trans  &trans      &trans  &trans  &trans
-            >;
-        };
-
-        navigation {
-            bindings = <
-&trans  &kp LA(LG(LEFT_ARROW))     &kp PG_UP  &kp PG_DN  &kp LA(LG(RIGHT))  &trans    &trans  &trans  &trans  &trans  &trans  &trans
- &none          &kp LEFT_ARROW  &kp UP_ARROW   &kp DOWN          &kp RIGHT  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans            &kp LG(LEFT)      &kp HOME    &kp END      &kp LG(RIGHT)  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                                                 &trans             &trans  &trans    &trans  &trans  &trans
+&none           &kp Q        &kp W               &kp F             &kp M           &kp X              &kp Z              &kp U                &kp G                &kp B            &kp J  &none
+&none           &kp R        &kp O               &kp S             &kp E           &kp DELETE &kp BACKSPACE              &kp T                &kp I                &kp N            &kp A  &none
+&none  &mt LEFT_ALT K  &mt LCTRL V  &mt LEFT_COMMAND C  &mt LEFT_SHIFT L           &none              &none  &mt RIGHT_SHIFT D  &mt RIGHT_COMMAND P  &mt RIGHT_CONTROL H  &mt RIGHT_ALT Y  &none
+                                                 &mo 1      &mo_kp 2 TAB  &mo_kp 3 SPACE     &mo_kp 4 ENTER    &mo_kp 5 ESCAPE                &mo 6
             >;
         };
 
         mouse {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp MDL   &kp MSD     &kp MSU     &kp MSR  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp MML   &kp MMD     &kp MMU     &kp MMR  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp MB1   &kp MS3     &kp MS4     &kp MB2  &trans
+                        &trans  &trans  &trans    &trans  &trans    &trans
+            >;
+        };
+
+        navigation {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp RA(RG(LEFT))  &kp PG_DN  &kp PG_UP  &kp RA(RG(RIGHT))  &trans
+ &none  &trans  &trans  &trans  &trans  &trans    &trans          &kp LEFT   &kp DOWN     &kp UP          &kp RIGHT  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans      &kp RG(LEFT)    &kp END   &kp HOME      &kp RG(RIGHT)  &trans
+                        &trans  &trans  &trans    &trans            &trans     &trans
+            >;
+        };
+
+        numpad {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp N7  &kp N8  &kp N9     &kp N0  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp N4  &kp N5  &kp N6  &kp MINUS  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp N1  &kp N2  &kp N3  &kp EQUAL  &trans
                         &trans  &trans  &trans    &trans  &trans  &trans
+            >;
+        };
+
+        punctuation_brackets {
+            bindings = <
+&none   &kp LESS_THAN  &kp GREATER_THAN  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans    &trans  &trans  &trans  &trans  &trans  &none
+&none   &kp SEMICOLON         &kp COMMA             &kp COLON             &kp PERIOD  &trans    &trans  &trans  &trans  &trans  &trans  &none
+&none  &kp LEFT_BRACE   &kp RIGHT_BRACE      &kp LEFT_BRACKET      &kp RIGHT_BRACKET  &trans    &trans  &trans  &trans  &trans  &trans  &none
+                                                       &trans                 &trans  &trans    &trans  &trans  &trans
+            >;
+        };
+
+        quotes_dashes {
+            bindings = <
+&trans    &kp LA(A)   &kp PIPE           &kp BSLH  &kp SLASH  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans    &kp LA(O)  &kp GRAVE  &kp DOUBLE_QUOTES    &kp SQT  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp LA(SQT)  &kp TILDE     &kp UNDERSCORE  &kp MINUS  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                                           &trans     &trans  &trans    &trans  &trans  &trans
             >;
         };
 
         function_keys {
             bindings = <
-&trans  &kp F1   &kp F2   &kp F3   &kp F4  &trans    &trans  &kp F13  &kp F14  &kp F15  &kp F16  &trans
-&trans  &kp F5   &kp F6   &kp F7   &kp F8  &trans    &trans  &kp F17  &kp F18  &kp F19  &kp F20  &trans
-&trans  &kp F9  &kp F10  &kp F11  &kp F12  &trans    &trans  &kp F21  &kp F22  &kp F23  &kp F24  &trans
-                          &trans   &trans  &trans    &trans   &trans   &trans
+&trans  &kp F1   &kp F2   &kp F3   &kp F4  &trans    &bt BT_CLR  &kp F13  &kp F14  &kp F15  &kp F16  &trans
+&trans  &kp F5   &kp F6   &kp F7   &kp F8  &trans    &bt BT_PRV  &kp F17  &kp F18  &kp F19  &kp F20  &trans
+&trans  &kp F9  &kp F10  &kp F11  &kp F12  &trans    &bt BT_NXT  &kp F21  &kp F22  &kp F23  &kp F24  &trans
+                          &trans   &trans  &trans        &trans   &trans   &trans
             >;
         };
     };
 };
+Footer

@@ -37,10 +37,10 @@
 
         base {
             bindings = <
-&none           &kp Q        &kp W               &kp G                  &kp F           &kp K             &kp J              &kp H                &kp U                &kp P            &kp Y  &none
-&none  &mt LEFT_ALT D  &mt LCTRL S  &mt LEFT_COMMAND A       &mt LEFT_SHIFT E           &none             &none  &mt RIGHT_SHIFT T  &mt RIGHT_COMMAND O  &mt RIGHT_CONTROL I  &mt RIGHT_ALT N  &none
-&none           &kp Z        &kp X               &kp V                  &kp C           &none             &none              &kp R                &kp L                &kp M            &kp B  &none
-                                            &kp DELETE  &mo_kp 1 LEFT_COMMAND  &mo_kp 1 SPACE    &mo_kp 2 ENTER    &mo_kp 3 ESCAPE        &kp BACKSPACE
+&none           &kp Q        &kp W               &kp G                 &kp F           &kp K             &kp J              &kp H                &kp U                &kp P            &kp Y  &none
+&none  &mt LEFT_ALT D  &mt LCTRL S  &mt LEFT_COMMAND A      &mt LEFT_SHIFT E           &none             &none  &mt RIGHT_SHIFT T  &mt RIGHT_COMMAND O  &mt RIGHT_CONTROL I  &mt RIGHT_ALT N  &none
+&none           &kp Z        &kp X               &kp V                 &kp C           &none             &none              &kp R                &kp L                &kp M            &kp B  &none
+                                            &kp DELETE  &mt LEFT_COMMAND TAB  &mo_kp 1 SPACE    &mo_kp 2 ENTER    &mo_kp 3 ESCAPE        &kp BACKSPACE
             >;
         };
 

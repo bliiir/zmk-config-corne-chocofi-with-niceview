@@ -64,10 +64,10 @@
 
         chars+numpad {
             bindings = <
-&trans  &trans     &trans  &kp ASTERISK    &kp AMPERSAND  &kp BACKSLASH    &kp ASTERISK  &kp N7  &kp N8  &kp N9     &kp N0  &trans
-&trans  &trans  &kp CARET   &kp PERCENT       &kp DOLLAR      &kp SLASH       &kp MINUS  &kp N4  &kp N5  &kp N6  &kp SLASH  &trans
-&trans  &trans   &kp HASH   &kp AT_SIGN  &kp EXCLAMATION       &kp PIPE        &kp PLUS  &kp N1  &kp N2  &kp N3  &kp EQUAL  &trans
-                                 &trans           &trans         &trans          &trans  &trans  &trans
+&trans  &trans  &kp QUESTION  &kp ASTERISK    &kp AMPERSAND  &kp BACKSLASH    &kp ASTERISK  &kp N7  &kp N8  &kp N9     &kp N0  &trans
+&trans  &trans     &kp CARET   &kp PERCENT       &kp DOLLAR      &kp SLASH       &kp MINUS  &kp N4  &kp N5  &kp N6  &kp SLASH  &trans
+&trans  &trans      &kp HASH   &kp AT_SIGN  &kp EXCLAMATION       &kp PIPE        &kp PLUS  &kp N1  &kp N2  &kp N3  &kp EQUAL  &trans
+                                    &trans           &trans         &trans          &trans  &trans  &trans
             >;
         };
     };

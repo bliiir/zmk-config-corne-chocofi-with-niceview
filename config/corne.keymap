@@ -46,10 +46,10 @@
 
         brackets+function {
             bindings = <
-&trans    &kp LA(A)      &kp LEFT_BRACKET      &kp RIGHT_BRACKET  &kp GRAVE          &kp TILDE    &kp F13  &kp F7  &kp F8  &kp F9  &kp F10  &trans
-&trans    &kp LA(O)  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS    &kp SQT  &kp DOUBLE_QUOTES    &kp F14  &kp F4  &kp F5  &kp F6  &kp F11  &trans
-&trans  &kp LA(SQT)        &kp LEFT_BRACE        &kp RIGHT_BRACE  &kp MINUS     &kp UNDERSCORE    &kp F15  &kp F1  &kp F2  &kp F3  &kp F12  &trans
-                                                          &trans     &trans             &trans     &trans  &trans  &trans
+&trans  &kp LEFT_BRACE   &kp RIGHT_BRACE      &kp LEFT_BRACKET      &kp RIGHT_BRACKET    &kp LA(A)    &kp F13  &kp F7  &kp F8  &kp F9  &kp F10  &trans
+&trans   &kp BACKSLASH         &kp SLASH             &kp MINUS              &kp MINUS    &kp LA(O)    &kp F14  &kp F4  &kp F5  &kp F6  &kp F11  &trans
+&trans   &kp LESS_THAN  &kp GREATER_THAN  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LA(SQT)    &kp F15  &kp F1  &kp F2  &kp F3  &kp F12  &trans
+                                                        &trans                 &trans       &trans     &trans  &trans  &trans
             >;
         };
 
@@ -64,10 +64,10 @@
 
         chars+numpad {
             bindings = <
-&trans  &trans  &kp QUESTION  &kp ASTERISK    &kp AMPERSAND  &kp BACKSLASH    &kp ASTERISK  &kp N7  &kp N8  &kp N9     &kp N0  &trans
-&trans  &trans     &kp CARET   &kp PERCENT       &kp DOLLAR      &kp SLASH       &kp MINUS  &kp N4  &kp N5  &kp N6  &kp SLASH  &trans
-&trans  &trans      &kp HASH   &kp AT_SIGN  &kp EXCLAMATION       &kp PIPE        &kp PLUS  &kp N1  &kp N2  &kp N3  &kp EQUAL  &trans
-                                    &trans           &trans         &trans          &trans  &trans  &trans
+&trans  &kp TILDE  &kp QUESTION  &kp ASTERISK    &kp AMPERSAND  &kp DOUBLE_QUOTES    &kp ASTERISK  &kp N7  &kp N8  &kp N9     &kp N0  &trans
+&trans  &kp GRAVE     &kp CARET   &kp PERCENT       &kp DOLLAR            &kp SQT       &kp MINUS  &kp N4  &kp N5  &kp N6   &kp PLUS  &trans
+&trans   &kp PIPE      &kp HASH   &kp AT_SIGN  &kp EXCLAMATION             &trans       &kp SLASH  &kp N1  &kp N2  &kp N3  &kp EQUAL  &trans
+                                       &trans           &trans             &trans          &trans  &trans  &trans
             >;
         };
     };

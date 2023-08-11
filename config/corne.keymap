@@ -46,10 +46,10 @@
 
         brackets+function {
             bindings = <
-&trans        &kp LEFT_BRACE        &kp RIGHT_BRACE      &kp BACKSLASH  &kp SLASH   &kp PIPE    &trans    &kp AMPERSAND  &kp ASTERISK  &kp QUESTION    &kp RA(A)  &trans
-&trans  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp DOUBLE_QUOTES    &kp SQT  &kp GRAVE    &trans       &kp DOLLAR   &kp PERCENT     &kp CARET    &kp RA(O)  &trans
-&trans      &kp LEFT_BRACKET      &kp RIGHT_BRACKET     &kp UNDERSCORE  &kp MINUS  &kp TILDE    &trans  &kp EXCLAMATION   &kp AT_SIGN      &kp HASH  &kp RA(SQT)  &trans
-                                                                &trans     &trans     &trans    &trans           &trans        &trans
+&trans        &kp LEFT_BRACE        &kp RIGHT_BRACE      &kp BACKSLASH  &kp SLASH   &kp PIPE      &kp RA(A)    &kp AMPERSAND  &kp ASTERISK  &kp LESS_THAN  &kp GREATER_THAN  &trans
+&trans  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp DOUBLE_QUOTES    &kp SQT  &kp GRAVE      &kp RA(O)       &kp DOLLAR   &kp PERCENT      &kp CARET      &kp QUESTION  &trans
+&trans      &kp LEFT_BRACKET      &kp RIGHT_BRACKET     &kp UNDERSCORE  &kp MINUS  &kp TILDE    &kp RA(SQT)  &kp EXCLAMATION   &kp AT_SIGN       &kp HASH            &trans  &trans
+                                                                &trans     &trans     &trans         &trans           &trans        &trans
             >;
         };
 

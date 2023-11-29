@@ -35,10 +35,10 @@
 
         base {
             bindings = <
-&none  &kp Q           &kp W        &kp G               &kp F                 &kp K             &kp J           &kp U              &kp H                &kp P                &kp Y            &none
-&none  &mt LEFT_ALT D  &mt LCTRL A  &mt LEFT_COMMAND S  &mt LEFT_SHIFT E      &kp COMMA         &kp PERIOD      &mt RIGHT_SHIFT T  &mt RIGHT_COMMAND I  &mt RIGHT_CONTROL O  &mt RIGHT_ALT N  &none
-&none  &kp Z           &kp X        &kp V               &kp C                 &kp SEMICOLON     &kp COLON       &kp R              &kp L                &kp M                &kp B            &none
-                                    &kp DELETE          &mt LEFT_COMMAND TAB  &mo_kp 1 SPACE    &mo_kp 2 ENTER  &mo_kp 3 ESCAPE    &kp BACKSPACE
+&none  &kp Q           &kp W        &kp G               &kp F                   &kp K            &kp J            &kp U              &kp H                &kp P                &kp Y            &none
+&none  &mt LEFT_ALT D  &mt LCTRL A  &mt LEFT_COMMAND S  &mt LEFT_SHIFT E        &kp COLON        &kp PERIOD       &mt RIGHT_SHIFT T  &mt RIGHT_COMMAND I  &mt RIGHT_CONTROL O  &mt RIGHT_ALT N  &none
+&none  &kp Z           &kp X        &kp V               &kp C                   &kp SEMICOLON    &kp COMMA        &kp R              &kp L                &kp M                &kp B            &none
+                                    &kp DELETE          &mt LEFT_COMMAND SPACE  &mo_kp 1 TAB     &mo_kp 2 ESCAPE  &mo_kp 3 ENTER     &kp BACKSPACE
             >;
         };
 
@@ -62,10 +62,10 @@
 
         chars+numpad {
             bindings = <
-&trans  &kp F1   &kp F2   &kp F3   &kp F4   &kp F5     &kp SLASH     &kp N7  &kp N8  &kp N9  &kp N0     &trans
-&trans  &kp F6   &kp F7   &kp F8   &kp F9   &kp F10    &kp PLUS      &kp N4  &kp N5  &kp N6  &kp MINUS  &trans
-&trans  &kp F11  &kp F12  &kp F13  &kp F14  &kp F15    &kp ASTERISK  &kp N1  &kp N2  &kp N3  &kp EQUAL  &trans
-                          &trans   &trans   &trans     &trans        &trans  &trans
+&trans  &kp F1   &kp F2   &kp F3   &kp F4   &kp F5     &kp ASTERISK  &kp N7  &kp N8        &kp N9  &kp N0     &trans
+&trans  &kp F6   &kp F7   &kp F8   &kp F9   &kp F10    &kp PLUS      &kp N4  &kp N5        &kp N6  &kp MINUS  &trans
+&trans  &kp F11  &kp F12  &kp F13  &kp F14  &kp F15    &kp N0        &kp N1  &kp N2        &kp N3  &kp EQUAL  &trans
+                          &trans   &trans   &trans     &trans        &trans  &kp NUMBER_0
             >;
         };
     };

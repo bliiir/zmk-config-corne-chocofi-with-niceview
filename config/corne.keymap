@@ -13,13 +13,11 @@
         mo_kp: mo_kp {
             compatible = "zmk,behavior-hold-tap";
             label = "MO_KP";
-            bindings =
-                <&mo>,
-                <&kp>;
+            bindings = <&mo>, <&kp>;
 
             #binding-cells = <2>;
             flavor = "balanced";
-            tapping-term-ms = <200>;
+            tapping-term-ms = <250>;
         };
     };
 
@@ -30,6 +28,16 @@
             bindings = <&bt BT_CLR>;
             key-positions = <29 30>;
         };
+
+        bt_nxt {
+            bindings = <&bt BT_NXT>;
+            key-positions = <17 18>;
+        };
+
+        bt_prv {
+            bindings = <&bt BT_PRV>;
+            key-positions = <5 6>;
+        };
     };
 
     keymap {
@@ -37,37 +45,37 @@
 
         base {
             bindings = <
-&none           &kp Q        &kp W               &kp G                 &kp F           &kp K             &kp J              &kp U                &kp H                &kp P            &kp Y  &none
-&none  &mt LEFT_ALT D  &mt LCTRL S  &mt LEFT_COMMAND A      &mt LEFT_SHIFT E      &kp PERIOD         &kp COLON  &mt RIGHT_SHIFT T  &mt RIGHT_COMMAND O  &mt RIGHT_CONTROL I  &mt RIGHT_ALT N  &none
-&none           &kp Z        &kp X               &kp V                 &kp C       &kp COMMA     &kp SEMICOLON              &kp R                &kp L                &kp M            &kp B  &none
-                                            &kp DELETE  &mt LEFT_COMMAND TAB  &mo_kp 1 SPACE    &mo_kp 2 ENTER    &mo_kp 3 ESCAPE        &kp BACKSPACE
+&none  &kp Q           &kp W        &kp G               &kp F             &kp K                   &kp J            &kp U              &kp H                &kp P                &kp Y            &none
+&none  &mt LEFT_ALT D  &mt LCTRL A  &mt LEFT_COMMAND S  &mt LEFT_SHIFT E  &kp COLON               &kp PERIOD       &mt RIGHT_SHIFT T  &mt RIGHT_COMMAND I  &mt RIGHT_CONTROL O  &mt RIGHT_ALT N  &none
+&none  &kp Z           &kp X        &kp V               &kp C             &kp SEMICOLON           &kp COMMA        &kp R              &kp L                &kp M                &kp B            &none
+                                    &kp DELETE          &mo_kp 1 SPACE    &mt LEFT_COMMAND TAB    &mo_kp 2 ESCAPE  &mo_kp 3 ENTER     &kp BACKSPACE
             >;
         };
 
         brackets+function {
             bindings = <
-&trans        &kp LEFT_BRACE        &kp RIGHT_BRACE      &kp BACKSLASH  &kp SLASH   &kp PIPE    &trans    &kp AMPERSAND  &kp ASTERISK  &kp QUESTION    &kp RA(A)  &trans
-&trans  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp DOUBLE_QUOTES    &kp SQT  &kp GRAVE    &trans       &kp DOLLAR   &kp PERCENT     &kp CARET    &kp RA(O)  &trans
-&trans      &kp LEFT_BRACKET      &kp RIGHT_BRACKET     &kp UNDERSCORE  &kp MINUS  &kp TILDE    &trans  &kp EXCLAMATION   &kp AT_SIGN      &kp HASH  &kp RA(SQT)  &trans
-                                                                &trans     &trans     &trans    &trans           &trans        &trans
+&none  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp BACKSLASH      &kp SLASH  &kp PIPE     &kp RA(A)    &kp AMPERSAND    &kp ASTERISK  &kp LESS_THAN  &kp GREATER_THAN  &none
+&none  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp DOUBLE_QUOTES  &kp SQT    &kp GRAVE    &kp RA(O)    &kp DOLLAR       &kp PERCENT   &kp CARET      &kp QUESTION      &none
+&none  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp UNDERSCORE     &kp MINUS  &kp TILDE    &kp RA(SQT)  &kp EXCLAMATION  &kp AT_SIGN   &kp HASH       &trans            &none
+                                                    &trans             &trans     &trans       &trans       &trans           &trans
             >;
         };
 
         navigation {
             bindings = <
-&trans  &bt BT_CLR  &trans  &trans  &trans  &trans    &trans  &kp RA(RG(LEFT))  &kp PG_DN  &kp PG_UP  &kp RA(RG(RIGHT))  &trans
- &none  &bt BT_NXT  &trans  &trans  &trans  &trans    &trans          &kp LEFT   &kp DOWN     &kp UP          &kp RIGHT  &trans
-&trans  &bt BT_PRV  &trans  &trans  &trans  &trans    &trans      &kp RG(LEFT)    &kp END   &kp HOME      &kp RG(RIGHT)  &trans
-                            &trans  &trans  &trans    &trans            &trans     &trans
+&none  &trans  &trans  &trans  &trans  &trans    &trans  &kp RA(RG(LEFT))  &kp PG_DN  &kp PG_UP  &kp RA(RG(RIGHT))  &none
+&none  &trans  &trans  &trans  &trans  &trans    &trans  &kp LEFT          &kp DOWN   &kp UP     &kp RIGHT          &none
+&none  &trans  &trans  &trans  &trans  &trans    &trans  &kp RG(LEFT)      &kp END    &kp HOME   &kp RG(RIGHT)      &none
+                       &trans  &trans  &trans    &trans  &trans            &trans
             >;
         };
 
         chars+numpad {
             bindings = <
-&trans  &kp F10  &kp F9  &kp F8  &kp F7  &kp F13       &kp SLASH  &kp N7  &kp N8  &kp N9     &kp N0  &trans
-&trans  &kp F11  &kp F6  &kp F5  &kp F4  &kp F14        &kp PLUS  &kp N4  &kp N5  &kp N6  &kp MINUS  &trans
-&trans  &kp F12  &kp F3  &kp F2  &kp F1  &kp F15    &kp ASTERISK  &kp N1  &kp N2  &kp N3  &kp EQUAL  &trans
-                         &trans  &trans   &trans          &trans  &trans  &trans
+&trans  &kp F1   &kp F2   &kp F3   &kp F4   &kp F5     &kp SLASH     &kp N7  &kp N8        &kp N9  &kp PLUS   &trans
+&trans  &kp F6   &kp F7   &kp F8   &kp F9   &kp F10    &kp ASTERISK  &kp N4  &kp N5        &kp N6  &kp MINUS  &trans
+&trans  &kp F11  &kp F12  &kp F13  &kp F14  &kp F15    &kp PERCENT   &kp N1  &kp N2        &kp N3  &kp EQUAL  &trans
+                          &trans   &trans   &trans     &trans        &trans  &kp NUMBER_0
             >;
         };
     };
